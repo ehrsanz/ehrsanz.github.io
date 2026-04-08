@@ -1,0 +1,168 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f3;
+    color: #333;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 6px solid #a8c3a0;
+    object-fit: cover;
+}
+
+.intro h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.intro h3 {
+    color: #6b8f71;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* MAIN GRID */
+.main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+}
+
+/* CARDS */
+.card {
+    background: #f7faf6;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.card h2 {
+    background: #c8dcbf;
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* LISTS */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* RIGHT SIDE TEXT */
+.right p {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.right strong {
+    color: #4d6b50;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* BACKGROUND SHAPES */
+.bg-shapes {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* YLEINEN MUOTO */
+.shape {
+    position: absolute;
+    background: #dbe8d3;
+    border-radius: 50%;
+}
+
+/* VASEN ISOMPI KAARI */
+.shape-left {
+    width: 400px;
+    height: 400px;
+    left: -150px;
+    top: 50px;
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+}
+
+/* OIKEA YLÄKULMA */
+.shape-top-right {
+    width: 350px;
+    height: 350px;
+    right: -120px;
+    top: -100px;
+    border-radius: 50% 60% 40% 70% / 60% 40% 60% 40%;
+}
+
+/* NOSTA SISÄLTÖ MUOTOJEN PÄÄLLE */
+.container {
+    position: relative;
+    z-index: 1;
+}
